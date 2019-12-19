@@ -1,5 +1,6 @@
 <template>
 <div id="app">
+	<router-view/>
 	<child-form :headerText="header" :footerText="footer">
 		<p>{{message}}</p>
 	</child-form>

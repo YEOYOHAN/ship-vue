@@ -1,22 +1,16 @@
 <template>
 <div>
 	<h1>seqsum 페이지</h1>
-	<Nav></Nav>
 	<ul>
 		<input v-model ="first" type="text" />첫번째수
 		<input v-model ="second" type="text" />두번째수
 	</ul>
 	<button @click="sum">+</button>
 	<p>합계:{{totalNum}}</p>
-	<Footer></Footer>
 </div>
 </template>
 <script>
-import Nav from "@/components/cmm/Nav.vue"
-import Footer from "@/components/cmm/Footer.vue"
 export default {
-	name : 'seqnum',
-	components : {Nav, Footer},
 	data(){
 		return {
 			totalNum : 0,

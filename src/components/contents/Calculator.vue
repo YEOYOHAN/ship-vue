@@ -1,6 +1,5 @@
 	<template>
 <div>
-    <Nav></Nav>
     <div class="calculator">
     <div class="display">{{current || '0'}}</div>
     <div @click="clear" class="btn">C</div>
@@ -23,18 +22,11 @@
     <div class="btn">.</div>
     <div @click="equal" class="btn operator">=</div>
   </div>
-  <Footer></Footer>
 </div>
   
 </template>
 <script>
-import Nav from "@/components/cmm/Nav.vue"
-import Footer from "@/components/cmm/Footer.vue"
 export default {
-	name : 'calculator',
-	components : {
-		Nav, Footer
-	},
 	data(){
 		return {
 			previos : null,

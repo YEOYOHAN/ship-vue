@@ -7,12 +7,13 @@
 		<template #sidebar="sidebar">
 			<ul class="menu">
 				<li v-for="sidebar of sidebars" :key="sidebar.menu">
-					<a :href="sidebar.link">{{sidebar.menu}}</a>
+					<!-- <a :href="sidebar.link">{{sidebar.menu}}</a> -->
+					<router-link :to="sidebar.link">{{sidebar.menu}}</router-link>
 				</li>
 			</ul>
 		</template>
 		<template #content="content">
-			<h2>{{content.cont}}</h2>
+			<router-view/>
 		</template>
 		<template #footer="footer">
 			<h3>{{footer.foot}}</h3>
@@ -26,11 +27,12 @@ export default{
 	components : {Layout},
 	data(){
 		return{
-			sidebars : [
-				{menu : "Home", link: "#"},
-				{menu : "About", link: "#"},
-				{menu : "Contact", link: "#"},
-				{menu : "Subject", link: "#"}
+			sidebars:[
+				{menu:"장바구니",link:"/cart"},
+				{menu:"계산기",link:"/calculator"},
+				{menu:"자연수의 합",link:"/seqsum"},
+				{menu:"은행",link:"/bank"},
+				{menu:"할일",link:"/todo"}
 			]
 		}
 	}
